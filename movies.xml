@@ -63,14 +63,13 @@
 </table>
 <table x="1286" y="272" name="movies">
 <row name="id" null="1" autoincrement="1">
-<datatype>TEXT</datatype>
-<default>NULL</default><relation table="users" row="id" />
-</row>
-<row name="title" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="title" null="1" autoincrement="0">
+<datatype>TEXT</datatype>
+<default>NULL</default></row>
 <row name="release_year" null="1" autoincrement="0">
-<datatype>BIGINT</datatype>
+<datatype>DECIMAL</datatype>
 <default>NULL</default></row>
 <row name="rating" null="1" autoincrement="0">
 <datatype>DECIMAL</datatype>
@@ -86,13 +85,13 @@
 <row name="date" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default></row>
-<row name="id_movies" null="1" autoincrement="0">
-<datatype>TEXT</datatype>
-<default>NULL</default><relation table="movies" row="id" />
-</row>
-<row name="id_users" null="1" autoincrement="0">
+<row name="user_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="users" row="id" />
+</row>
+<row name="movie_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="movies" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
